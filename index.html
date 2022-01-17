@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./common/css/style.css">
+    <link rel="stylesheet" href="./common/css/reset.css">
+    <link rel="stylesheet" href="./common/css/navbar.css">
+    <link rel="stylesheet" href="./common/css/calendar.css">
+    <link rel="stylesheet" href="./common/css/event.css">
+    <script defer src="./common/js/app.js"></script>
+    <title>Calendar</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar centered">
+            <div class="menu">
+                <div class="open-menu" aria-label="Mobile menu open tab">Menu</div>
+                <ul class="navbar-nav" data-active="false">
+                    <li>
+                        <a href="#instructions" aria-label="Link to instructions section"
+                            aria-hidden="true">Instructions</a>
+                    </li>
+                    <li>
+                        <a href="#calendar" aria-label="Link to calendar section" aria-hidden="true">Calendar</a>
+                    </li>
+                    <li>
+                        <div class="close-menu">Close</div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header" data-fade="false">
+            <h1>Event Planner</h1>
+            <p>Plan out all of your events here on this calendar</p>
+        </div>
+
+    </header>
+
+    <section id="#instructions" class="instructions-section centered" data-fade="false">
+        <h1>Instructions:</h1>
+        <p>1. Create an event on the calendar by pressing the "Create Event" with the + symbol.</p>
+        <p>2. Fill out the following template that asks for the name of the event, event date, and event time.</p>
+        <p>3. Pick out a color that you prefer and press add event, or you can cancel and press on the "X".</p>
+        <p>4. Hover over the event card to expand and scroll through the details of the event, or delete the event by
+            pressing the "X" on the top right when hovered.</p>
+        <p>5. You can now view your created event in the calendar below, when you hover over the colored square
+            date, you will be able to see the details of your event that you have created.</p>
+    </section>
+
+
+    <section id="event-creater">
+        <div class="event-create-container centered" data-fade="false">
+            <div class="event-form">
+                <form id="event-form">
+                    <input id="event-title" placeholder="Event title">
+                    <input id="event-date" type="date">
+                    <input type="time" id="event-time" placeholder="Add a time..">
+                    <label for="event-color" id="color-pick">Pick a color</label>
+                    <input id="event-color" value="#ffffff" type="color">
+                    <div class="form-return">X</div>
+                    <button class="form-close-button" type="submit">Add Event</button>
+                </form>
+
+            </div>
+            <button class="create-event-button">Create Event</button>
+            <ul class="event-list">
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="calendar">
+        <div class="cal-container centered">
+            <div class="calendar" data-fade="false">
+                <div class="cal-header">
+                    <ul class="cal-monthes">
+                        <li aria-label="Left arrow controlling month selector" data-month-left>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                style="fill: rgba(0, 0, 0, 1);">
+                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li data-month>
+                        </li>
+                        <li aria-label="Right arrow controlling month selector" data-month-right>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                style="fill: rgba(0, 0, 0, 1);">
+                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z">
+                                </path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cal-body">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+</html>
